@@ -1,1 +1,2 @@
 # IFPI-ProjetoDiagnostico_Domotica
+teste

@@ -54,7 +54,7 @@ O usuário pode desativar uma cena sem apagá-la
 
 ## 5. Documentação de API
 ### 5.1 Criar Cômodo
-- **<u>Method</u>:** POST
+- ***Method:*** POST
 - **<u>URL</u>:** /api/comodos
 - **<u>Body</u>:**
 ```typescript

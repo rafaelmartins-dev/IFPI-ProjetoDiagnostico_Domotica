@@ -63,10 +63,234 @@ O usuário pode desativar uma cena sem apagá-la
 }
 ```
 - **Response:**
-```python
+```typescript
 {  
   "id": 1,
   "nome": "Sala de Estar"
 }
 ```
 - **Status Code:** 200 Ok
+<br/><br/>
+
+### 5.2 Listar Cômodo
+- **Method:** GET
+- **URL:** /api/comodos
+- **Response:**
+```typescript
+[
+  { "id": 1, "nome": "Sala de Estar" },
+  { "id": 2, "nome": "Cozinha" }
+]
+```
+- **Status Code:** 200 Ok
+<br/><br/>
+
+
+### 5.3. Atualizar Cômodo
+- **Method:** PUT
+- **URL:** /api/comodos/{id}
+- **Body:**
+```typescript
+{
+  "nome": "Sala de Jantar"
+}
+```
+- **Response:**
+```typescript
+{
+  "id": 1,
+  "nome": "Sala de Jantar"
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.4. Excluir Cômodo
+- **Method:** DELETE
+- **URL:** /api/comodos/{id}
+- **Response:**
+```typescript
+{
+  "message": "Cômodo excluído com sucesso"
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.5. Criar Dispositivo
+- **Method:** POST
+- **URL:** /api/dispositivos
+- **Body:**
+```typescript
+{
+  "nome": "Lâmpada",
+  "comodo_id": 1
+}
+```
+- **Response:**
+```typescript
+{
+  "id": 1,
+  "nome": "Lâmpada",
+  "estado": false,
+  "comodo_id": 1
+}
+```
+- **Status Code:** 201 Created, 400 Bad Request
+<br/><br/>
+
+
+### 5.6. Listar Dispositivos
+- **Method:** GET
+- **URL:** /api/dispositivos
+- **Query Params (Opcional):** ?comodo_id=1
+- **Response:**
+```typescript
+[
+  { "id": 1, "nome": "Lâmpada", "estado": false, "comodo_id": 1 }
+]
+```
+- **Status Code:** 200 OK
+<br/><br/>
+
+
+### 5.7. Alternar Estado do Dispositivo
+- **Method:** PUT
+- **URL:** /api/dispositivos/{id}/alternar
+- **Response:**
+```typescript
+{
+  "id": 1,
+  "estado": true
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.8. Atualizar Dispositivo
+- **Method:** PUT
+- **URL:** /api/dispositivos/{id}
+- **Body:**
+```typescript
+{
+  "nome": "Ventilador",
+  "estado": true,
+  "comodo_id": 2
+}
+```
+- **Response:**
+```typescript
+{
+  "id": 1,
+  "nome": "Ventilador",
+  "estado": true,
+  "comodo_id": 2
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.9. Excluir Dispositivo
+- **Method:** DELETE
+- **URL:** /api/dispositivos/{id}
+- **Response:**
+```typescript
+{
+  "message": "Dispositivo excluído com sucesso"
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.10. Criar Cena
+- **Method:** POST
+- **URL:** /api/cenas
+- **Body:**
+```typescript
+{
+  "nome": "Chegar em Casa",
+  "ativa": true,
+  "acoes": [
+    { "dispositivo_id": 1, "ordem": 1, "intervalo": 2 },
+    { "dispositivo_id": 2, "ordem": 2, "intervalo": 3 }
+  ]
+}
+```
+- **Response:**
+```typescript
+{
+  "id": 1,
+  "nome": "Chegar em Casa",
+  "ativa": true,
+  "acoes": [...]
+}
+```
+- **Status Code:** 201 Created, 400 Bad Request
+<br/><br/>
+
+
+### 5.11. Listar Cenas
+- **Method:** GET
+- **URL:** /api/cenas
+- **Response:**
+```typescript
+[
+  { "id": 1, "nome": "Chegar em Casa", "ativa": true }
+]
+```
+- **Status Code:** 200 OK
+<br/><br/>
+
+
+### 5.12. Execurtar Cena
+- **Method:** POST
+- **URL:** /api/cenas/{id}/executar
+- **Response:**
+```typescript
+{
+  "message": "Cena executada com sucesso"
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.13. Atualizar Cena
+- **Method:** PUT
+- **URL:** /api/cenas/{id}
+- **Body:**
+```typescript
+{
+  "nome": "Modo Cinema",
+  "ativa": false,
+  "acoes": [...]
+}
+```
+- **Response:**
+```typescript
+{
+  "id": 1,
+  "nome": "Modo Cinema",
+  "ativa": false
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>
+
+
+### 5.14. Excluir Cena
+- **Method:** DELETE
+- **URL:** /api/cenas/{id}
+- **Response:**
+```typescript
+{
+  "message": "Cena excluída com sucesso"
+}
+```
+- **Status Code:** 200 OK, 404 Not Found
+<br/><br/>

@@ -49,7 +49,7 @@ O usuário pode desativar uma cena sem apagá-la
 <br/><br/>
 
 ## 4. Diagrama Entidade e Relacionamento (DER)
-1[Diagrama Entidade e Relacionamento](https://github.com/rafaelmartins-dev/IFPI-ProjetoDiagnostico_Domotica/blob/main/imagens/Diagrama_EntidadeRelacionamento.png)
+![Diagrama Entidade e Relacionamento](https://github.com/rafaelmartins-dev/IFPI-ProjetoDiagnostico_Domotica/blob/main/imagens/Diagrama_EntidadeRelacionamento.png)
 <br/><br/>
 
 

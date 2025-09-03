@@ -44,4 +44,9 @@ O usuário pode desativar uma cena sem apagá-la
 ![Diagrama de Casos de Uso](https://github.com/rafaelmartins-dev/IFPI-ProjetoDiagnostico_Domotica/blob/main/imagens/diagrama_CasosDeUso.png)
 <br/><br/>
 
-## 3.
+## 3. Diagrama de Classes
+![Diagrama de Classes](https://github.com/rafaelmartins-dev/IFPI-ProjetoDiagnostico_Domotica/blob/main/imagens/diagrama_Classes.png)
+<br/><br/>
+
+## 4. Diagrama Entidade e Relacionamento (DER)
+

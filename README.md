@@ -264,7 +264,7 @@ O usuário pode desativar uma cena sem apagá-la
 - **Method:** PUT
 - **URL:** /api/cenas/{id}
 - **Body:**
-```java
+```typescript
 {
     "nome": "Modo Cinema",
     "ativa": false,

@@ -7,7 +7,7 @@ Alunos: Juliana Lima, Roniel Dias, Rafael Martins
 # Projeto de Diagnóstico: "Controle de Domótica"
 <br/><br/>
 
-## Lista de Casos de Uso
+## 1. Lista de Casos de Uso
 
 ### 1.1. Cadastrar Cômodo
 O Usuário pode adicionar um novo cômodo à casa
@@ -264,7 +264,7 @@ O usuário pode desativar uma cena sem apagá-la
 - **Method:** PUT
 - **URL:** /api/cenas/{id}
 - **Body:**
-```typescript
+```java
 {
   "nome": "Modo Cinema",
   "ativa": false,

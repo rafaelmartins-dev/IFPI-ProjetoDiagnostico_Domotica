@@ -266,9 +266,9 @@ O usuário pode desativar uma cena sem apagá-la
 - **Body:**
 ```java
 {
-  "nome": "Modo Cinema",
-  "ativa": false,
-  "acoes": [...]
+    "nome": "Modo Cinema",
+    "ativa": false,
+    "acoes": [...]
 }
 ```
 - **Response:**

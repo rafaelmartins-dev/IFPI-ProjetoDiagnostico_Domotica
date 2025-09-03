@@ -52,4 +52,21 @@ O usuário pode desativar uma cena sem apagá-la
 ![Diagrama Entidade e Relacionamento](https://github.com/rafaelmartins-dev/IFPI-ProjetoDiagnostico_Domotica/blob/main/imagens/Diagrama_EntidadeRelacionamento.png)
 <br/><br/>
 
-
+## 5. Documentação de API
+### 5.1 Criar Cômodo
+- **<u>Method</u>:** POST
+- **<u>URL</u>:** /api/comodos
+- **<u>Body</u>:**
+```typescript
+{
+  "nome": "Sala de Estar"
+}
+```
+- **<u>Response</u>:**
+```typescript
+{  
+  "id": 1,
+  "nome": "Sala de Estar"
+}
+```
+- **<u>Status Code</u>:** 200 Ok
